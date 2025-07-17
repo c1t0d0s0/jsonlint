@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Formatter</h1>
+        <div class="editor-container">
+            <div id="line-numbers" class="line-numbers"></div>
+            <textarea id="json-editor" class="json-editor" spellcheck="false" wrap="off"></textarea>
+        </div>
+        <div id="error-message"></div>
+        <div class="button-container">
+            <button id="validate-btn">Validate JSON</button>
+            <button id="clear-btn">Clear</button>
+            <button id="compress-btn">Compress</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

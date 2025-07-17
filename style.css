@@ -1,0 +1,128 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+}
+
+.editor-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.editor-container:focus-within {
+    border-color: #bb86fc;
+    box-shadow: 0 0 10px #bb86fc40;
+}
+
+.line-numbers {
+    width: 40px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    color: #888;
+    text-align: right;
+    font: 16px/1.5 'Fira Code', 'Courier New', Courier, monospace;
+    user-select: none;
+    border-right: 1px solid #333333;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+#json-editor {
+    flex-grow: 1;
+    background-color: transparent;
+    color: #e0e0e0;
+    border: none;
+    padding: 15px;
+    font: 16px/1.5 'Fira Code', 'Courier New', Courier, monospace;
+    resize: none;
+    box-sizing: border-box;
+    white-space: pre; /* No wrap, enable horizontal scroll */
+    overflow: auto; /* Enable scrollbars */
+}
+
+#json-editor:focus {
+    outline: none;
+}
+
+/* Syntax Highlighting Colors */
+.json-punctuation { color: #e0e0e0; }
+.json-key { color: #9cdcfe; }
+.json-string { color: #ce9178; }
+.json-number { color: #b5cea8; }
+.json-boolean { color: #569cd6; }
+.json-null { color: #569cd6; }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #a362f7;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#clear-btn {
+    background-color: #373737;
+    color: #e0e0e0;
+}
+#clear-btn:hover {
+    background-color: #4a4a4a;
+}
+
+#compress-btn {
+    background-color: #03dac6;
+    color: #121212;
+}
+#compress-btn:hover {
+    background-color: #01bfae;
+}
+
+
+
+
+#error-message {
+    text-align: center;
+    font-weight: bold;
+    min-height: 24px;
+    margin-top: 15px;
+}
+
+#error-message.error {
+    color: #cf6679;
+}
+
+#error-message.success {
+    color: #03dac6;
+}
