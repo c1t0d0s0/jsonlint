@@ -1,6 +1,6 @@
 # JSONLint
 
-A simple web-based JSON validator and formatter created with Gemini.
+A simple web-based JSON validator and formatter.
 
 ## Features
 
