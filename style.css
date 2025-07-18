@@ -140,6 +140,14 @@ button:active {
     transform: scale(0.98);
 }
 
+#validate-btn {
+    background-color: #87CEEB;
+}
+
+#validate-btn:hover {
+    background-color: #76b6d4;
+}
+
 #clear-btn {
     background-color: #373737;
     color: #e0e0e0;
